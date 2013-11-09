@@ -1,0 +1,22 @@
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="{{ img_num }}">
+    <table border>
+    {% for line in results %}
+        <tr><td> {{ line }} </td></tr>
+    {% else %}
+    {% endfor %}
+    </table>
+        <form action="/food" method="POST">
+        <input type="text" name="foodtype" autocomplete="off" placeholder="Kind of food">
+        <br>
+        <input type="text" name="location" autocomplete="off" placeholder="Your location">
+        <br>
+        <input type="submit" value="Find me food!">
+        <p> Powered by: </p>
+        <img src="{{ url_for('static', filename='foursquare-logo.png') }}" width="200">
+        <img src="{{ url_for('static', filename='yelp-logo-AT-1.jpg') }}" width="200">
+    </form>
+</body>
