@@ -123,4 +123,4 @@ def get_locs():
     return render_template('food.html', img_num=filename, results=restaurantNames)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
